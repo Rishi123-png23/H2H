@@ -12,10 +12,55 @@ export default function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    
+    try {
+      // Use Web3Forms service with traditional form submission
+      const form = document.createElement('form');
+      form.action = 'https://api.web3forms.com/submit';
+      form.method = 'POST';
+      form.style.display = 'none';
+      
+      // Add Web3Forms fields
+      const fields = {
+        access_key: '675b3c24-8999-426b-819b-29bc8e789cc7',
+        subject: 'New Contact Form Submission - Hair 2 Hair Studio',
+        from_name: 'Hair 2 Hair Studio Website',
+        redirect: 'https://web3forms.com/success',
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        concern: formData.concern,
+        message: formData.message,
+        botcheck: ''
+      };
+      
+      Object.entries(fields).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      });
+      
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Show success message
+      alert('Thank you for your message! We will get back to you soon.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        concern: '',
+        message: '',
+      });
+      
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Sorry, there was an error sending your message. Please try again.');
+    }
   };
 
   return (
@@ -28,12 +73,33 @@ export default function Contact() {
           <p className="text-xl text-gray-600">We're here to answer all your questions</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          <Card hover className="p-6 text-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+          <Card hover className="p-6 text-center border-2 border-[#8B1538]">
             <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#8B1538] to-[#A0153E] rounded-full mb-4">
               <MapPin className="text-white" size={24} />
             </div>
-            <h3 className="font-semibold text-lg mb-3 text-gray-800">Visit Us</h3>
+            <h3 className="font-semibold text-lg mb-3 text-gray-800">
+              Main Branch - Hyderabad
+              <span className="block text-sm text-[#8B1538] font-medium mt-1">Dilshuknagar</span>
+            </h3>
+            <p className="text-gray-600 mb-4">
+              1st Floor, beside Sai Baba Temple, Pratap Nagar, Dilsukhnagar, Hyderabad, Telangana 500060
+            </p>
+            <a
+              href="https://www.google.com/maps?sca_esv=2286ae5c4aad172f&rlz=1C1CHBF_enIN1003IN1003&sxsrf=AE3TifN9v7wVjK-Cfq4Nuf7Et3DMZzzogQ:1761147267709&gs_lp=Egxnd3Mtd2l6LXNlcnAiIWgyaCBoYWlyIHN0dWRpbyBoeWRlcmFiYWQgZGlsc2h1ayoCCAAyBxAhGKABGAoyBxAhGKABGApIvClQyw5YzRpwAXgAkAEAmAGAAqABjgyqAQUwLjYuM7gBAcgBAPgBAZgCCqAC7QzCAggQABiABBiwA8ICDhAAGIAEGLADGIYDGIoFwgILEAAYgAQYsAMYogTCAgsQABiwAxiiBBiJBcICBRAhGKABwgIEECEYFZgDAIgGAZAGCZIHBTEuNi4zoAexK7IHBTAuNi4zuAfjDMIHBzAuMi42LjLIBzw&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kedsqbs3mcs7MZ1hrQ1iZ5S4&daddr=1st+Floor,+beside+Sai+Baba+Temple,+Pratap+Nagar,+Dilsukhnagar,+Hyderabad,+Telangana+500060"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#8B1538] font-medium hover:text-[#A0153E] transition"
+            >
+              Get Directions →
+            </a>
+          </Card>
+
+          <Card hover className="p-6 text-center">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-gray-500 to-gray-600 rounded-full mb-4">
+              <MapPin className="text-white" size={24} />
+            </div>
+            <h3 className="font-semibold text-lg mb-3 text-gray-800">Khammam Branch</h3>
             <p className="text-gray-600 mb-4">
               2nd floor, Star complex, Near new bus stand, Khammam, Telangana 507002
             </p>
@@ -41,7 +107,7 @@ export default function Contact() {
               href="https://maps.google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#8B1538] font-medium hover:text-[#A0153E] transition"
+              className="text-gray-600 font-medium hover:text-gray-800 transition"
             >
               Get Directions →
             </a>
@@ -59,8 +125,8 @@ export default function Contact() {
                 </a>
               </p>
               <p>
-                <a href="mailto:hair2hairstudiokhammam@gmail.com" className="hover:text-[#8B1538] transition break-all">
-                  hair2hairstudiokhammam@gmail.com
+                <a href="mailto:hair2hairstidio2024@gmail.com" className="hover:text-[#8B1538] transition break-all">
+                  hair2hairstidio2024@gmail.com
                 </a>
               </p>
               <a

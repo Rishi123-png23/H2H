@@ -19,19 +19,19 @@ export default function Button({
   href,
   type = 'button',
 }: ButtonProps) {
-  const baseClasses = 'font-medium transition-all duration-300 inline-flex items-center justify-center';
+  const baseClasses = 'font-medium tracking-wide transition-all duration-300 inline-flex items-center justify-center rounded-pill';
 
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-[#8B1538] to-[#A0153E] text-white hover:shadow-lg hover:scale-105',
-    secondary: 'bg-[#D4AF37] text-white hover:bg-[#F4E4C1] hover:text-[#8B1538]',
-    outline: 'border-2 border-[#8B1538] text-[#8B1538] bg-transparent hover:bg-[#8B1538] hover:text-white',
-  };
+    primary: 'bg-gradient-to-r from-brand.primary to-brand.accent text-white hover:shadow-glow hover:-translate-y-0.5',
+    secondary: 'bg-brand.gold text-black hover:bg-brand.cream hover:text-brand.primary',
+    outline: 'border-2 border-brand.primary text-brand.primary bg-transparent hover:bg-brand.primary hover:text-white',
+  } as const;
 
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm rounded-md',
-    md: 'px-6 py-3 text-base rounded-lg',
-    lg: 'px-8 py-4 text-lg rounded-lg',
-  };
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg',
+  } as const;
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 

@@ -5,5 +5,22 @@
 @layer base {
   body {
     font-family: 'Poppins', sans-serif;
+    color: #1F1F1F;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F7E7EB 100%);
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.01em;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* Ensure submit buttons have visible black text across the site */
+  button[type='submit'] {
+    color: #000000 !important;
   }
 }

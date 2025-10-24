@@ -8,28 +8,28 @@ export default function Men() {
       features: ['Durable PU base', 'Water-resistant', 'Active lifestyle ready', 'Natural appearance'],
       base: 'Polyurethane (PU)',
       coverage: 'Full/Partial',
-      image: 'https://images.pexels.com/photos/1319799/pexels-photo-1319799.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://th.bing.com/th/id/R.7323914b2e757ff30370a1e787588950?rik=2WTqCVyALM6EPw&riu=http%3a%2f%2fwww.newhairline.com%2fcdn%2fshop%2fproducts%2fskin-pu-base-toupee-lace-frontal-hair-systme-for-men_c9002543-cf3f-4edd-a781-3eef109b01af_1200x1200.jpg%3fv%3d1596697281&ehk=36tzl%2bxFQyU623F%2fBFwaXLDsChk8%2bNXJpNB4cOnEYiI%3d&risl=&pid=ImgRaw&r=0',
     },
     {
       name: 'Lace Hair System',
       features: ['Breathable', 'Natural hairline', 'Lightweight', 'Comfortable wear'],
       base: 'Swiss Lace',
       coverage: 'Full Coverage',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://m.media-amazon.com/images/I/612y6HJ1sbL._SL1000_.jpg',
     },
     {
       name: 'Hybrid Base System',
       features: ['Best of both worlds', 'Durable front', 'Breathable top', 'Versatile'],
       base: 'Hybrid (Lace + PU)',
       coverage: 'Full Coverage',
-      image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/Data/IMG-20251003-WA0076.jpg',
     },
     {
       name: 'Mono Top System',
       features: ['Hand-tied', 'Natural movement', 'Long-lasting', 'Professional look'],
       base: 'Monofilament',
       coverage: 'Full/Partial',
-      image: 'https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/Data/IMG-20251003-WA0077.jpg',
     },
   ];
 
@@ -39,21 +39,21 @@ export default function Men() {
       features: ['Classic style', 'Natural gray options', 'Conservative cut', 'Professional appearance'],
       style: 'Short/Medium',
       type: 'Full Wig',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.ZWtjxUeUA_sQNiR4fIlUMgHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3',
     },
     {
       name: 'Casual Style Wig',
       features: ['Relaxed look', 'Easy maintenance', 'Comfortable', 'Natural styling'],
       style: 'Medium',
       type: 'Full Wig',
-      image: 'https://images.pexels.com/photos/1319799/pexels-photo-1319799.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/Data/IMG-20251003-WA0079.jpg',
     },
     {
       name: 'Sports Active Wig',
       features: ['Secure fit', 'Sweat-resistant', 'Durable', 'Natural movement'],
       style: 'Short',
       type: 'Full Wig',
-      image: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: '/Data/IMG-20251003-WA0074.jpg',
     },
   ];
 
@@ -85,8 +85,7 @@ export default function Men() {
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/1319799/pexels-photo-1319799.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'url(/Data/IMG-20251003-WA0075.jpg)',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
@@ -170,7 +169,7 @@ export default function Men() {
             Full Wigs & Toupees
           </h2>
           <p className="text-gray-600 mb-8 text-lg">
-            Complete hair solutions styled for different occasions and lifestyles.
+            Complete hair solutions styled for different occasions and lifestyles. <strong>World Wide Delivery Available</strong>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

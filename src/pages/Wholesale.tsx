@@ -25,9 +25,63 @@ export default function Wholesale() {
     { icon: Headphones, title: 'Training & Support', description: 'Expert guidance and resources' },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    try {
+      // Use Web3Forms service with traditional form submission
+      const form = document.createElement('form');
+      form.action = 'https://api.web3forms.com/submit';
+      form.method = 'POST';
+      form.style.display = 'none';
+      
+      // Add Web3Forms fields
+      const fields = {
+        access_key: '675b3c24-8999-426b-819b-29bc8e789cc7',
+        subject: 'New Website Enquiry - B2B Wholesale',
+        from_name: 'Hair 2 Hair Studio Website',
+        redirect: 'https://web3forms.com/success',
+        businessName: formData.businessName,
+        businessType: formData.businessType,
+        gst: formData.gst,
+        contactPerson: formData.contactPerson,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address,
+        monthlyVolume: formData.monthlyVolume,
+        productInterest: formData.productInterest,
+        botcheck: ''
+      };
+      
+      Object.entries(fields).forEach(([key, value]) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = value;
+        form.appendChild(input);
+      });
+      
+      document.body.appendChild(form);
+      form.submit();
+      
+      // Show success message
+      alert('Application submitted successfully! We will get back to you soon.');
+      setFormData({
+        businessName: '',
+        businessType: '',
+        gst: '',
+        contactPerson: '',
+        email: '',
+        phone: '',
+        address: '',
+        monthlyVolume: '',
+        productInterest: '',
+      });
+      
+    } catch (error) {
+      console.error('Error sending application:', error);
+      alert('Sorry, there was an error sending your application. Please try again.');
+    }
   };
 
   return (
@@ -35,8 +89,7 @@ export default function Wholesale() {
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: 'url(/Data/IMG-20251003-WA0073.jpg)',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
@@ -125,6 +178,75 @@ export default function Wholesale() {
           </div>
         </section>
 
+        <section className="mb-16 bg-gradient-to-r from-[#F5E6EA] to-[#E4B5C0] rounded-2xl p-8">
+          <h2
+            className="text-4xl font-serif text-center text-[#8B1538] mb-8"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            World Wide Delivery Available
+          </h2>
+          <div className="text-center mb-8">
+            <p className="text-lg text-gray-700 mb-6">
+              We provide worldwide delivery through our trusted courier partners to ensure your orders reach you safely and on time.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <h3 className="font-semibold text-[#8B1538] mb-2">Blue Dart</h3>
+                <p className="text-sm text-gray-600">Premium express delivery service</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <h3 className="font-semibold text-[#8B1538] mb-2">Delhivery</h3>
+                <p className="text-sm text-gray-600">Reliable logistics partner</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <h3 className="font-semibold text-[#8B1538] mb-2">DHL Express</h3>
+                <p className="text-sm text-gray-600">International shipping specialist</p>
+              </div>
+              <div className="bg-white rounded-lg p-4 shadow-md">
+                <h3 className="font-semibold text-[#8B1538] mb-2">FedEx</h3>
+                <p className="text-sm text-gray-600">Global delivery network</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mt-4">
+              All our premium hair patches and wigs are carefully packaged and shipped worldwide through these trusted courier partners.
+            </p>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2
+            className="text-4xl font-serif text-center text-[#8B1538] mb-8"
+            style={{ fontFamily: 'Playfair Display, serif' }}
+          >
+            Premium Hair Patches & Wigs Collection
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { src: '/Data/IMG-20251003-WA0073.jpg', name: 'Classic Men\'s Hair System', description: 'Natural hairline • Comfortable wear • Salon grade' },
+              { src: '/Data/IMG-20251003-WA0074.jpg', name: 'Premium Hair Patch', description: 'High quality • Durable • Natural look' },
+              { src: '/Data/IMG-20251003-WA0075.jpg', name: 'Professional Hair System', description: 'Salon grade • Long lasting • Easy maintenance' },
+              { src: '/Data/IMG-20251003-WA0076.jpg', name: 'Natural Hair Patch', description: 'Breathable • Comfortable • Professional finish' },
+              { src: '/Data/IMG-20251003-WA0077.jpg', name: 'Premium Hair System', description: 'High quality materials • Natural appearance' },
+              { src: '/Data/IMG-20251003-WA0078.jpg', name: 'Professional Hair Patch', description: 'Salon quality • Durable • Natural look' },
+              { src: '/Data/Golden_Silk_hair_patch.jpg', name: 'Golden Silk Hair Patch', description: 'Premium silk base • Natural hair • Luxurious feel' },
+              { src: '/Data/Golden_hair_patch.jpg', name: 'Golden Hair Patch', description: 'Golden tone • Premium quality • Natural appearance' },
+              { src: '/Data/Australian_mirage.jpg', name: 'Australian Mirage', description: 'Australian hair • Premium quality • Natural look' },
+              { src: '/Data/mf_patch.jpg', name: 'MF Hair Patch', description: 'Multi-fiber • Durable • Professional grade' },
+              { src: '/Data/china_mirage.jpg', name: 'China Mirage', description: 'Chinese hair • High quality • Natural appearance' },
+              { src: '/Data/golden_miraz.jpg', name: 'Golden Miraz', description: 'Golden tone • Premium quality • Natural look' },
+              { src: '/Data/mono_hair_patch.jpg', name: 'Mono Hair Patch', description: 'Monofilament base • Natural parting • Professional grade' },
+            ].map((item, idx) => (
+              <Card key={idx} hover className="overflow-hidden">
+                <img src={item.src} alt={item.name} className="w-full h-56 object-cover" />
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg text-gray-800 mb-1">{item.name}</h3>
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
         <section className="mb-16 bg-gray-50 rounded-2xl p-8">
           <h2
             className="text-4xl font-serif text-center text-[#8B1538] mb-8"
@@ -177,11 +299,17 @@ export default function Wholesale() {
             B2B Registration
           </h2>
           <Card className="max-w-3xl mx-auto p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form id="wholesale-form" action="https://api.web3forms.com/submit" method="POST" onSubmit={handleSubmit} className="space-y-6">
+              <input type="hidden" name="access_key" value="675b3c24-8999-426b-819b-29bc8e789cc7" />
+              <input type="hidden" name="subject" value="New Website Enquiry - B2B Wholesale" />
+              <input type="hidden" name="from_name" value="Hair 2 Hair Studio Website" />
+              <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+              <input type="checkbox" name="botcheck" id="" style={{ display: 'none' }} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Business Name *</label>
                   <input
+                    name="businessName"
                     type="text"
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
@@ -192,6 +320,7 @@ export default function Wholesale() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Business Type *</label>
                   <select
+                    name="businessType"
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
                     value={formData.businessType}
@@ -209,6 +338,7 @@ export default function Wholesale() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">GST Number</label>
                 <input
+                  name="gst"
                   type="text"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
                   value={formData.gst}
@@ -220,6 +350,7 @@ export default function Wholesale() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Contact Person *</label>
                   <input
+                    name="contactPerson"
                     type="text"
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
@@ -230,6 +361,7 @@ export default function Wholesale() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Phone *</label>
                   <input
+                    name="phone"
                     type="tel"
                     required
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
@@ -242,6 +374,7 @@ export default function Wholesale() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
                 <input
+                  name="email"
                   type="email"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
@@ -253,6 +386,7 @@ export default function Wholesale() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Address *</label>
                 <textarea
+                  name="address"
                   required
                   rows={3}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
@@ -264,6 +398,7 @@ export default function Wholesale() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Expected Monthly Order Volume *</label>
                 <select
+                  name="monthlyVolume"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
                   value={formData.monthlyVolume}
@@ -279,6 +414,7 @@ export default function Wholesale() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Product Interest *</label>
                 <textarea
+                  name="productInterest"
                   required
                   rows={3}
                   placeholder="Please specify which products you're interested in..."

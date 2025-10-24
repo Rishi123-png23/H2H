@@ -37,7 +37,7 @@ export default function Services() {
         'Styling and finishing',
       ],
       benefits: ['No chemicals or glue', 'Breathable', 'Adjustable', 'Minimal tension on scalp'],
-      image: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://i.pinimg.com/originals/df/d8/72/dfd872195ea95e604d03ee5b28627766.jpg',
     },
     {
       id: 'clip-in',
@@ -54,7 +54,7 @@ export default function Services() {
         'Styling guidance',
       ],
       benefits: ['No commitment', 'Easy to apply and remove', 'Can style as desired', 'Reusable'],
-      image: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://tse4.mm.bing.net/th/id/OIP.vEsLRRYpDjVnl8naWeCn7AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3',
     },
     {
       id: 'extensions',

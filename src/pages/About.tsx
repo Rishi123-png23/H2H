@@ -5,32 +5,32 @@ import Button from '../components/Button';
 export default function About() {
   const team = [
     {
-      name: 'Rajesh Kumar',
+      name: 'Jampala Sathish',
       role: 'Founder & Master Hair Specialist',
-      experience: '15+ years',
-      expertise: 'Hair Bonding & Systems',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400',
-    },
-    {
-      name: 'Priya Sharma',
-      role: 'Senior Hair Stylist',
       experience: '10+ years',
-      expertise: 'Wigs & Extensions',
-      image: 'https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=400',
+      expertise: 'Hair Bonding & Systems',
+      image: '/Data/Sathish.jpg',
     },
     {
-      name: 'Anil Reddy',
+      name: 'Jampala Rishi Krishna',
+      role: 'Cheif Technical Officer',
+      experience: '2+ years',
+      expertise: 'Technical worksand Marketing',
+      image: '/Data/Rishi.png',
+    },
+    {
+      name: 'Jampala Anil',
       role: 'Hair Replacement Specialist',
-      experience: '8+ years',
+      experience: '5+ years',
       expertise: 'Men\'s Hair Systems',
-      image: 'https://images.pexels.com/photos/1319799/pexels-photo-1319799.jpeg?auto=compress&cs=tinysrgb&w=400',
+      image: '/Data/anil.jpg',
     },
     {
-      name: 'Kavya Menon',
+      name: 'Jampala Navya',
       role: 'Consultation Expert',
       experience: '6+ years',
-      expertise: 'Color Matching & Customization',
-      image: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=400',
+      expertise: 'Marketing Lead',
+      image: '/Data/Navya.jpg',
     },
   ];
 
@@ -85,32 +85,54 @@ export default function About() {
                 className="text-4xl font-serif text-[#8B1538] mb-6"
                 style={{ fontFamily: 'Playfair Display, serif' }}
               >
-                Our Story
+                Our Vision & Goal
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Founded in 2008, Hair2Hair Studio began with a simple vision: to help people regain their confidence
-                  through natural, high-quality hair replacement solutions.
+                  We are a team of dedicated professionals who specialize in hair replacement, hair extensions, and hair
+                  wigs. Our mission is to help our clients feel confident and beautiful by providing high-quality hair
+                  solutions that look and feel natural. At our salon, we understand how important it is to have healthy,
+                  beautiful hair.
                 </p>
                 <p>
-                  We understand how difficult hair loss and hair thinning can be. Every issue is unique, and every
-                  client deserves personalized attention. That's why we've dedicated ourselves to becoming experts in
-                  non-surgical hair replacement solutions.
+                  Unfortunately, many people struggle with hair loss due to various factors such as genetics, medical
+                  conditions, or aging. That’s where we come in – we offer a range of services to help restore your hair
+                  and boost your confidence.
                 </p>
                 <p>
-                  Over 15 years later, we've helped thousands of clients transform their appearance and boost their
-                  self-esteem. Our commitment to quality, discretion, and natural results has made us one of the most
-                  trusted names in hair replacement in Telangana.
+                  Our hair replacement services are designed to provide a natural-looking solution for those
+                  experiencing hair loss. We use the latest techniques and technologies to create a customized hair
+                  system that fits your scalp perfectly and looks like your own natural hair.
                 </p>
-                <p className="text-[#8B1538] font-medium italic">
-                  At Hair 2 Hair Studio, we pay attention to our customers' problems with great detail, giving them the
-                  best without any compromise.
+                <p>
+                  Whether you’re dealing with partial or complete hair loss, we have a solution that can help. In
+                  addition to hair replacement, we also offer hair extensions for those looking to add length, volume,
+                  or color to their hair.
+                </p>
+                <p>
+                  Our extensions are made from high-quality human hair and are designed to blend seamlessly with your
+                  natural hair. We offer a variety of options to suit different hair types, textures, and styles.
+                </p>
+                <p>
+                  For those who prefer a non-surgical solution, we offer a range of hair wigs. Our wigs are made from
+                  the finest materials and are available in a range of colors, lengths, and styles. We can help you
+                  choose the perfect wig to suit your face shape, skin tone, and personal style.
+                </p>
+                <p>
+                  At our salon, we believe that everyone deserves to feel confident and beautiful. That’s why we offer a
+                  welcoming, supportive environment where you can feel comfortable discussing your hair concerns and
+                  finding the right solution for you.
+                </p>
+                <p>
+                  Our team is committed to providing exceptional service and helping you achieve the look you’ve always
+                  wanted. Thank you for considering us for your hair needs. We look forward to working with you and
+                  helping you achieve the beautiful, healthy hair you deserve.
                 </p>
               </div>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src="https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/Data/main_img1.jpeg"
                 alt="Hair2Hair Studio"
                 className="w-full h-full object-cover"
               />
@@ -139,29 +161,61 @@ export default function About() {
         </section>
 
         <section className="mb-16">
-          <h2
-            className="text-4xl font-serif text-center text-[#8B1538] mb-12"
-            style={{ fontFamily: 'Playfair Display, serif' }}
-          >
-            Meet Our Expert Team
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-center mb-16">
+            <h2
+              className="text-4xl md:text-5xl font-serif text-[#8B1538] mb-4"
+              style={{ fontFamily: 'Playfair Display, serif' }}
+            >
+              Meet Our Expert Team
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our dedicated professionals bring years of experience and expertise to provide you with the best hair solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             {team.map((member, index) => (
-              <Card key={index} hover className="overflow-hidden">
-                <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1 text-gray-800">{member.name}</h3>
-                  <p className="text-[#8B1538] font-medium mb-2">{member.role}</p>
-                  <div className="border-t pt-3 mt-3 text-sm text-gray-600 space-y-1">
-                    <p>
-                      <span className="font-medium">Experience:</span> {member.experience}
-                    </p>
-                    <p>
-                      <span className="font-medium">Expertise:</span> {member.expertise}
-                    </p>
+              <div key={index} className="group">
+                <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100">
+                  {/* Professional Image Container */}
+                  <div className="relative h-80 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+                    <img 
+                      src={member.image} 
+                      alt={member.name} 
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  {/* Professional Content */}
+                  <div className="p-6 lg:p-8">
+                    <div className="text-center">
+                      <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#8B1538] transition-colors duration-300">
+                        {member.name}
+                      </h3>
+                      <p className="text-[#8B1538] font-semibold text-sm lg:text-base mb-4 tracking-wide uppercase">
+                        {member.role}
+                      </p>
+                      
+                      {/* Professional Details */}
+                      <div className="space-y-3 pt-4 border-t border-gray-100">
+                        <div className="flex items-center justify-center gap-2">
+                          <div className="w-2 h-2 bg-[#8B1538] rounded-full"></div>
+                          <span className="text-sm text-gray-600 font-medium">
+                            <span className="text-gray-900">Experience:</span> {member.experience}
+                          </span>
+                        </div>
+                        <div className="flex items-center justify-center gap-2">
+                          <div className="w-2 h-2 bg-[#D4AF37] rounded-full"></div>
+                          <span className="text-sm text-gray-600 font-medium">
+                            <span className="text-gray-900">Expertise:</span> {member.expertise}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </section>

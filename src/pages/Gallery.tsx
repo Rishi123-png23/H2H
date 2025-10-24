@@ -7,64 +7,88 @@ export default function Gallery() {
 
   const images = [
     {
-      url: 'https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/Golden_Silk_hair_patch.jpg',
       category: 'women',
-      caption: 'Natural Hair Topper Transformation',
+      caption: 'Golden Silk Hair Patch - Premium Quality',
+      type: 'image',
     },
     {
-      url: 'https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/Golden_hair_patch.jpg',
       category: 'women',
-      caption: 'Full Lace Wig Styling',
+      caption: 'Golden Hair Patch - Natural Look',
+      type: 'image',
     },
     {
-      url: 'https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/Australian_mirage.jpg',
       category: 'women',
-      caption: 'Hair Extension Application',
+      caption: 'Australian Mirage - Premium Hair',
+      type: 'image',
     },
     {
-      url: 'https://images.pexels.com/photos/1319799/pexels-photo-1319799.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/3.mp4',
       category: 'men',
       caption: 'Men\'s Hair System - Professional Look',
+      type: 'video',
     },
     {
-      url: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/4.mp4',
       category: 'men',
       caption: 'Natural Hairline Restoration',
+      type: 'video',
     },
     {
-      url: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/5.mp4',
       category: 'men',
       caption: 'Active Lifestyle Hair System',
+      type: 'video',
     },
     {
-      url: 'https://images.pexels.com/photos/3065171/pexels-photo-3065171.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/1.mp4',
       category: 'products',
       caption: 'Premium Quality Hair Patches',
+      type: 'video',
     },
     {
-      url: 'https://images.pexels.com/photos/3992865/pexels-photo-3992865.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/2.mp4',
       category: 'products',
       caption: 'Various Wig Collections',
+      type: 'video',
     },
     {
-      url: 'https://images.pexels.com/photos/3065203/pexels-photo-3065203.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/gallery/6.mp4',
+      category: 'products',
+      caption: 'Professional Hair Solutions',
+      type: 'video',
+    },
+    {
+      url: '/Data/gallery/78.mp4',
+      category: 'products',
+      caption: 'Advanced Hair Systems',
+      type: 'video',
+    },
+    {
+      url: '/Data/gallery/9.mp4',
+      category: 'products',
+      caption: 'Premium Hair Products',
+      type: 'video',
+    },
+    {
+      url: '/Data/mf_patch.jpg',
       category: 'services',
-      caption: 'Professional Consultation',
+      caption: 'MF Hair Patch - Professional Grade',
+      type: 'image',
     },
     {
-      url: 'https://images.pexels.com/photos/3992856/pexels-photo-3992856.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/china_mirage.jpg',
       category: 'services',
-      caption: 'Hair Bonding Process',
+      caption: 'China Mirage - High Quality Hair',
+      type: 'image',
     },
     {
-      url: 'https://images.pexels.com/photos/3065187/pexels-photo-3065187.jpeg?auto=compress&cs=tinysrgb&w=800',
+      url: '/Data/golden_miraz.jpg',
       category: 'women',
-      caption: 'Glamorous Evening Style',
-    },
-    {
-      url: 'https://images.pexels.com/photos/1121796/pexels-photo-1121796.jpeg?auto=compress&cs=tinysrgb&w=800',
-      category: 'men',
-      caption: 'Mature Professional Style',
+      caption: 'Golden Miraz - Premium Hair Solution',
+      type: 'image',
     },
   ];
 
@@ -105,7 +129,19 @@ export default function Gallery() {
               onClick={() => setLightboxImage(image.url)}
             >
               <div className="relative group">
-                <img src={image.url} alt={image.caption} className="w-full h-72 object-cover" />
+                {image.type === 'video' ? (
+                  <video 
+                    src={image.url} 
+                    className="w-full h-72 object-cover" 
+                    muted 
+                    loop 
+                    playsInline
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => e.currentTarget.pause()}
+                  />
+                ) : (
+                  <img src={image.url} alt={image.caption} className="w-full h-72 object-cover" />
+                )}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                   <p className="text-white text-center px-4 font-medium">{image.caption}</p>
                 </div>
@@ -125,7 +161,17 @@ export default function Gallery() {
             >
               ×
             </button>
-            <img src={lightboxImage} alt="Enlarged view" className="max-w-full max-h-full object-contain" />
+            {lightboxImage.endsWith('.mp4') ? (
+              <video 
+                src={lightboxImage} 
+                className="max-w-full max-h-full object-contain" 
+                controls 
+                autoPlay
+                loop
+              />
+            ) : (
+              <img src={lightboxImage} alt="Enlarged view" className="max-w-full max-h-full object-contain" />
+            )}
           </div>
         )}
 
@@ -133,9 +179,9 @@ export default function Gallery() {
           <h2 className="text-3xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Follow Our Transformations
           </h2>
-          <p className="text-gray-700 mb-6">@hair2hairstudio on Instagram</p>
+          <p className="text-gray-700 mb-6">@h2h_hairstudio_ on Instagram</p>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/h2h_hairstudio_/?__pwa=1"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-[#8B1538] text-white px-8 py-3 rounded-lg hover:bg-[#A0153E] transition font-medium"

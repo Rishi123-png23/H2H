@@ -20,13 +20,75 @@ export default function Booking() {
     hearAbout: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (step < 5) {
       setStep(step + 1);
     } else {
-      console.log('Booking submitted:', formData);
-      alert('Booking confirmed! You will receive a confirmation email shortly.');
+      // Submit booking to Web3Forms
+      try {
+        // Use Web3Forms service with traditional form submission
+        const form = document.createElement('form');
+        form.action = 'https://api.web3forms.com/submit';
+        form.method = 'POST';
+        form.style.display = 'none';
+        
+        // Add Web3Forms fields
+        const fields = {
+          access_key: '675b3c24-8999-426b-819b-29bc8e789cc7',
+          subject: 'New Appointment Booking - Hair 2 Hair Studio',
+          from_name: 'Hair 2 Hair Studio Website',
+          redirect: 'https://web3forms.com/success',
+          service: formData.service,
+          date: formData.date,
+          time: formData.time,
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          gender: formData.gender,
+          age: formData.age,
+          previousCustomer: formData.previousCustomer,
+          concerns: formData.concerns,
+          communication: formData.communication,
+          hearAbout: formData.hearAbout,
+          botcheck: ''
+        };
+        
+        Object.entries(fields).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          form.appendChild(input);
+        });
+        
+        document.body.appendChild(form);
+        form.submit();
+        
+        // Show success message
+        alert('Booking confirmed! You will receive a confirmation email shortly.');
+        
+        // Reset form data
+        setFormData({
+          service: '',
+          date: '',
+          time: '',
+          name: '',
+          phone: '',
+          email: '',
+          gender: '',
+          age: '',
+          previousCustomer: '',
+          concerns: '',
+          communication: '',
+          hearAbout: '',
+        });
+        setStep(1);
+        
+      } catch (error) {
+        console.error('Error sending booking:', error);
+        alert('Sorry, there was an error sending your booking. Please try again.');
+      }
     }
   };
 
