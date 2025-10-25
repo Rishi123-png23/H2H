@@ -185,6 +185,31 @@
       ]
     }
     </script>
+    
+    <!-- Firebase Analytics -->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDeliv5yU0a4KkjyiD__bsH7JzgvZpGdjk",
+        authDomain: "hair2hairstudio.firebaseapp.com",
+        projectId: "hair2hairstudio",
+        storageBucket: "hair2hairstudio.firebasestorage.app",
+        messagingSenderId: "715644239867",
+        appId: "1:715644239867:web:52681943c9da7dbb49955e",
+        measurementId: "G-KLQTWTD52C"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
   </head>
   <body>
     <div id="root"></div>
