@@ -119,15 +119,23 @@ export default function About() {
                   choose the perfect wig to suit your face shape, skin tone, and personal style.
                 </p>
                 <p>
-                  At our salon, we believe that everyone deserves to feel confident and beautiful. That’s why we offer a
+                  At our salon, we believe that everyone deserves to feel confident and beautiful. That's why we offer a
                   welcoming, supportive environment where you can feel comfortable discussing your hair concerns and
                   finding the right solution for you.
                 </p>
                 <p>
-                  Our team is committed to providing exceptional service and helping you achieve the look you’ve always
+                  Our team is committed to providing exceptional service and helping you achieve the look you've always
                   wanted. Thank you for considering us for your hair needs. We look forward to working with you and
                   helping you achieve the beautiful, healthy hair you deserve.
                 </p>
+                
+                {/* Hidden SEO Content */}
+                <div className="hidden">
+                  <h3>About H2H Hair Studio - Best Hair Patches & Wigs in Hyderabad, Khammam, Kothagudem, Dilsukhnagar</h3>
+                  <p>H2H Hair Studio (Hair2Hair) is the leading hair replacement specialist serving Hyderabad, Khammam, Kothagudem, and Dilsukhnagar. Our main branch is located in Dilsukhnagar, Hyderabad, and we provide premium hair patches, wigs, and non-surgical hair replacement solutions across Telangana.</p>
+                  <p>With over 15 years of experience, H2H Hair Studio has become the trusted choice for hair patches in Hyderabad, hair studio Khammam, hair studio Kothagudem, and hair studio Dilsukhnagar. We specialize in natural-looking hair replacement solutions for men and women.</p>
+                  <p>Our expert team at H2H Hair Studio provides professional hair patch installation, wig fitting, hair bonding, and complete hair replacement services. We serve customers from all areas of Hyderabad, Khammam, Kothagudem, Dilsukhnagar, Secunderabad, and surrounding districts in Telangana.</p>
+                </div>
               </div>
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">

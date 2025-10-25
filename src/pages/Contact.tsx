@@ -71,6 +71,13 @@ export default function Contact() {
             Get In Touch
           </h1>
           <p className="text-xl text-gray-600">We're here to answer all your questions</p>
+          
+          {/* Hidden SEO Content */}
+          <div className="hidden">
+            <h2>Contact H2H Hair Studio - Best Hair Patches & Wigs in Hyderabad, Khammam, Kothagudem, Dilsukhnagar</h2>
+            <p>H2H Hair Studio (Hair2Hair) is your trusted hair replacement specialist in Hyderabad, Khammam, Kothagudem, and Dilsukhnagar. Contact us for premium hair patches, wigs, and non-surgical hair replacement solutions. Our main branch is located in Dilsukhnagar, Hyderabad, serving customers across Telangana.</p>
+            <p>Visit H2H Hair Studio for the best hair patches in Hyderabad, hair studio Khammam services, hair studio Kothagudem solutions, and hair studio Dilsukhnagar expertise. We provide professional hair replacement services with 15+ years of experience.</p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">

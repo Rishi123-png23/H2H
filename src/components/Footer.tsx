@@ -12,6 +12,14 @@ export default function Footer() {
             <p className="text-gray-400 mb-4 text-sm leading-relaxed">
               Premium hair replacement solutions, wigs, and patches. We understand your needs and provide natural, undetectable solutions.
             </p>
+            
+            {/* Hidden SEO Content */}
+            <div className="hidden">
+              <h3>H2H Hair Studio - Best Hair Patches & Wigs in Hyderabad, Khammam, Kothagudem, Dilsukhnagar</h3>
+              <p>H2H Hair Studio (Hair2Hair) is the leading hair replacement specialist in Hyderabad, Khammam, Kothagudem, and Dilsukhnagar. We offer premium hair patches, wigs, and non-surgical hair replacement solutions with 15+ years of experience. Our main branch is located in Dilsukhnagar, Hyderabad, serving customers across Telangana.</p>
+              <p>Visit H2H Hair Studio for the best hair patches in Hyderabad, hair studio Khammam services, hair studio Kothagudem solutions, and hair studio Dilsukhnagar expertise. We provide professional hair replacement services including hair patches for men, wigs for women, hair systems, toupees, hair bonding, and complete hair replacement solutions.</p>
+              <p>Our expert team at H2H Hair Studio provides natural-looking hair replacement solutions for men and women. We serve customers from all areas of Hyderabad, Khammam, Kothagudem, Dilsukhnagar, Secunderabad, and surrounding districts in Telangana. Contact us for the best hair studio experience in the region.</p>
+            </div>
             <p className="text-brand.gold italic font-medium mb-4">Beauty Meets Comfort</p>
             <div className="flex gap-3">
               <a href="https://www.facebook.com/share/1BoX9WysMB/" target="_blank" rel="noopener noreferrer" className="bg-[#4A4A4A] p-2 rounded-full hover:bg-brand.primary transition">
@@ -92,7 +100,7 @@ export default function Footer() {
       <div className="border-t border-gray-700 py-6">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           <p>© 2025 Hair2Hair Studio – All Rights Reserved</p>
-          <p>Design & Development by WebX Solutions</p>
+          <p>Design & Development by Rishi</p>
         </div>
       </div>
     </footer>
