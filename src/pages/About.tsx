@@ -62,11 +62,10 @@ export default function About() {
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
-          backgroundImage:
-            'url(https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: "url('/Data/about us.png')",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/90 via-[#A0153E]/75 to-[#8B1538]/60" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-serif mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -140,7 +139,7 @@ export default function About() {
             </div>
             <div className="rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/Data/main_img1.jpeg"
+                src="/Data/about us.png"
                 alt="Hair2Hair Studio"
                 className="w-full h-full object-cover"
               />

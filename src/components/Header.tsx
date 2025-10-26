@@ -50,9 +50,10 @@ export default function Header() {
               <a href="/services" className="text-sm text-center text-gray-700 hover:text-[#C19A6B] transition font-medium px-3 py-2 rounded hover:bg-gray-50">Services</a>
               <a href="/wholesale" className="text-sm text-center text-gray-700 hover:text-[#C19A6B] transition font-medium px-3 py-2 rounded hover:bg-gray-50">Wholesale</a>
               <a href="/gallery" className="text-sm text-center text-gray-700 hover:text-[#C19A6B] transition font-medium px-3 py-2 rounded hover:bg-gray-50">Gallery</a>
+              <a href="/about" className="text-sm text-center text-gray-700 hover:text-[#C19A6B] transition font-medium px-3 py-2 rounded hover:bg-gray-50">About Us</a>
               <a href="/contact" className="text-sm text-center text-gray-700 hover:text-[#C19A6B] transition font-medium px-3 py-2 rounded hover:bg-gray-50">Contact Us</a>
               <a
-                href="/booking"
+                href="/about"
                 className="bg-[#C19A6B] text-center text-white text-sm px-4 py-2 rounded hover:bg-[#D4AF37] transition-all duration-300 font-medium whitespace-nowrap"
               >
                 Book Free Appointment
@@ -74,7 +75,7 @@ export default function Header() {
             <a href="/about" className="block py-2 text-gray-700 hover:text-[#C19A6B] transition font-medium">About Us</a>
             <a href="/contact" className="block py-2 text-gray-700 hover:text-[#C19A6B] transition font-medium">Contact</a>
             <a
-              href="/booking"
+              href="/about"
               className="block text-center bg-[#C19A6B] text-white px-6 py-3 rounded hover:bg-[#D4AF37] transition-all duration-300 font-medium mt-4"
             >
               Book Appointment
