@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Calendar, Clock, User, Phone, MessageSquare } from 'lucide-react';
 import Card from '../components/Card';
 import Button from '../components/Button';
 
@@ -116,7 +116,7 @@ export default function Booking() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div className="max-w-4xl mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>

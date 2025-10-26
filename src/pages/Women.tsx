@@ -90,7 +90,7 @@ export default function Women() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
@@ -98,7 +98,7 @@ export default function Women() {
             'url(https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=1920)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#C19A6B]/80 to-[#D4AF37]/60" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-serif mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -113,7 +113,7 @@ export default function Women() {
         <section id="patches" className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2
-              className="text-4xl font-serif text-[#8B1538]"
+              className="text-4xl font-serif text-[#C19A6B]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Hair Patches & Toppers
@@ -138,14 +138,14 @@ export default function Women() {
                     <p className="text-sm text-gray-600">
                       <span className="font-medium">Base:</span> {product.base}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                       <span className="font-medium">Hair:</span> {product.hair}
                     </p>
                   </div>
                   <ul className="space-y-1 mb-4">
                     {product.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#8B1538] rounded-full" />
+                      <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-[#C19A6B] rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -162,13 +162,13 @@ export default function Women() {
         <section id="wigs" className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2
-              className="text-4xl font-serif text-[#8B1538]"
+              className="text-4xl font-serif text-[#C19A6B]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Full Wigs
             </h2>
           </div>
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-gray-700 mb-8 text-lg">
             Complete transformation with our premium wig collection. Choose from various styles, lengths, and colors. <strong>World Wide Delivery Available</strong>
           </p>
 
@@ -177,19 +177,19 @@ export default function Women() {
               <Card key={index} hover className="overflow-hidden">
                 <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2 text-gray-800">{product.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-[#C19A6B]">{product.name}</h3>
                   <div className="mb-3">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                       <span className="font-medium">Base:</span> {product.base}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                       <span className="font-medium">Hair:</span> {product.hair}
                     </p>
                   </div>
                   <ul className="space-y-1 mb-4">
                     {product.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#8B1538] rounded-full" />
+                        <span className="w-1.5 h-1.5 bg-[#C19A6B] rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -206,13 +206,13 @@ export default function Women() {
         <section id="extensions" className="mb-16">
           <div className="flex justify-between items-center mb-8">
             <h2
-              className="text-4xl font-serif text-[#8B1538]"
+              className="text-4xl font-serif text-[#C19A6B]"
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Hair Extensions
             </h2>
           </div>
-          <p className="text-gray-600 mb-8 text-lg">
+          <p className="text-gray-700 mb-8 text-lg">
             Add instant length, volume, and style with our premium hair extension collections.
           </p>
 
@@ -221,19 +221,19 @@ export default function Women() {
               <Card key={index} hover className="overflow-hidden">
                 <img src={product.image} alt={product.name} className="w-full h-56 object-cover" />
                 <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2 text-gray-800">{product.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2 text-[#C19A6B]">{product.name}</h3>
                   <div className="mb-3">
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                       <span className="font-medium">Type:</span> {product.type}
                     </p>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-700">
                       <span className="font-medium">Hair:</span> {product.hair}
                     </p>
                   </div>
                   <ul className="space-y-1 mb-4">
                     {product.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#8B1538] rounded-full" />
+                      <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-[#C19A6B] rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -247,11 +247,11 @@ export default function Women() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-[#F5E6EA] to-[#E4B5C0] rounded-2xl p-8 text-center">
-          <h3 className="text-3xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+        <section className="bg-gradient-to-r from-[#FAF9F6] to-[#E6D5B8] rounded-2xl p-8 text-center">
+          <h3 className="text-3xl font-serif text-[#C19A6B] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Need Help Choosing?
           </h3>
-          <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
+          <p className="text-gray-800 mb-6 max-w-2xl mx-auto">
             Our experts are here to help you find the perfect hair solution. Book a free consultation today!
           </p>
           <Button href="/booking" size="lg">

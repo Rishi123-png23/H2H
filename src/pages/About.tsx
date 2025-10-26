@@ -58,7 +58,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{

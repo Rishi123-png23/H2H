@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Crown, Sparkles, Scissors, Handshake as HandshakeIcon, Check, Star, ChevronLeft, ChevronRight, ArrowRight, Award, Users, Shield, Heart, Phone } from 'lucide-react';
+import { Crown, Sparkles, Scissors, Handshake as HandshakeIcon, Check, Star, ChevronLeft, ChevronRight, ArrowRight, Award, Users, Heart, Phone } from 'lucide-react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import GoogleReviews from '../components/GoogleReviews';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeTab, setActiveTab] = useState<'women' | 'men'>('men');
 
   const heroSlides = [
     {
@@ -80,37 +79,6 @@ export default function Home() {
     { number: '100%', label: 'Satisfaction Rate', icon: Heart },
   ];
 
-  const processSteps = [
-    { step: 1, title: 'Free Consultation', description: 'Understanding your needs and hair condition', icon: Phone },
-    { step: 2, title: 'Custom Design', description: 'Selecting the perfect match for you', icon: Scissors },
-    { step: 3, title: 'Hair System Fitting', description: 'Tailored to your specifications', icon: Crown },
-    { step: 4, title: 'Styling', description: 'Professional styling and blending', icon: Sparkles },
-    { step: 5, title: 'Aftercare', description: 'Maintenance and care guidance', icon: Shield },
-  ];
-
-  const testimonials = [
-    {
-      text: "The transformation changed my life. My confidence is back!",
-      author: "Rajesh Kumar",
-      location: "Hyderabad",
-      rating: 5,
-      image: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      text: "Natural looking results that exceeded my expectations.",
-      author: "Priya Sharma",
-      location: "Bangalore",
-      rating: 5,
-      image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      text: "Professional service and amazing aftercare support.",
-      author: "Amit Patel",
-      location: "Mumbai",
-      rating: 5,
-      image: "https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-  ];
 
   const transformationImages = [
     {
@@ -127,47 +95,8 @@ export default function Home() {
     },
   ];
 
-  const womenServices = [
-    {
-      title: 'Lace Hair Toppers',
-      description: 'Breathable, natural-looking coverage for crown and top areas',
-      price: 'Contact for pricing',
-      image: 'https://images.pexels.com/photos/3065209/pexels-photo-3065209.jpeg?auto=compress&cs=tinysrgb&w=600',
-    },
-    {
-      title: 'Full Lace Wigs',
-      description: 'Complete transformation with premium human hair - World Wide Delivery Available',
-      price: 'Contact for pricing',
-      image: 'https://i5.walmartimages.com/seo/360-Full-Lace-Frontal-Wig-Brazilian-Bone-Straight-13x4-Transparent-Lace-Front-Human-Hair-Wigs-For-Black-Women-Pre-Plucked-Bling_56d5d161-019b-4f41-907b-fe8e9c96c408.e82090b2de9b37b47b9644aee9f5c592.jpeg',
-    },
-    {
-      title: 'Clip-in Extensions',
-      description: 'Instant length and volume, easy to apply',
-      price: 'Contact for pricing',
-      image: 'https://i5.walmartimages.com/seo/6Pcs-Clip-in-Hair-Extensions-for-Women-20-Inch-Long-Wavy-Curly-Hair-Extension-Synthetic-Hair-Extension-Thick-Hairpieces-Medium-Brown-Ash-Blonde_e8b93fa3-08ae-46e7-818c-3a1b430d5229.1f2b18781deb3427683d1bcf28207b19.jpeg',
-    },
-  ];
 
-  const menServices = [
-    {
-      title: 'Skin Base Systems',
-      description: 'Durable PU base for active lifestyles',
-      price: 'Contact for pricing',
-      image: 'https://th.bing.com/th/id/R.7323914b2e757ff30370a1e787588950?rik=2WTqCVyALM6EPw&riu=http%3a%2f%2fwww.newhairline.com%2fcdn%2fshop%2fproducts%2fskin-pu-base-toupee-lace-frontal-hair-systme-for-men_c9002543-cf3f-4edd-a781-3eef109b01af_1200x1200.jpg%3fv%3d1596697281&ehk=36tzl%2bxFQyU623F%2fBFwaXLDsChk8%2bNXJpNB4cOnEYiI%3d&risl=&pid=ImgRaw&r=0',
-    },
-    {
-      title: 'Lace Hair Systems',
-      description: 'Breathable and natural hairline',
-      price: 'Contact for pricing',
-      image: 'https://m.media-amazon.com/images/I/612y6HJ1sbL._SL1000_.jpg',
-    },
-    {
-      title: 'Full Coverage Wigs',
-      description: 'Complete solution for full hair loss - World Wide Delivery Available',
-      price: 'Contact for pricing',
-      image: 'https://tse4.mm.bing.net/th/id/OIP.ZWtjxUeUA_sQNiR4fIlUMgHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3',
-    },
-  ];
+  
 
 
   const whyChooseUs = [
@@ -334,50 +263,34 @@ export default function Home() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2
-            className="text-4xl font-serif text-center mb-8 text-brand.primary"
-            style={{ fontFamily: 'Playfair Display, serif' }}
-          >
-            Featured Services
-          </h2>
-
-          <div className="flex justify-center gap-6 mb-12 flex-wrap">
-            <button
-              onClick={() => setActiveTab('women')}
-              className={`px-6 py-3 rounded-lg font-medium transition ${
-                activeTab === 'women'
-                  ? 'bg-brand.primary text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              Women's Solutions
-            </button>
-            <button
-              onClick={() => setActiveTab('men')}
-              className={`px-6 py-3 rounded-lg font-medium transition ${
-                activeTab === 'men'
-                  ? 'bg-brand.primary text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-              }`}
-            >
-              Men's Solutions
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {(activeTab === 'women' ? womenServices : menServices).map((service, index) => (
-              <Card key={index} hover className="overflow-hidden">
-                <img src={service.image} alt={service.title} className="w-full h-48 sm:h-56 md:h-64 object-cover object-center" />
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-800">{service.title}</h3>
-                  <p className="text-gray-600 mb-3">{service.description}</p>
-                  <p className="text-[#D4AF37] font-medium mb-4">{service.price}</p>
-                  <Button href={activeTab === 'women' ? '/women' : '/men'} variant="outline" size="sm" className="w-full">
-                    View Details
-                  </Button>
-                </div>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 items-center">
+            <div className="rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="https://shinemycrown.com/wp-content/uploads/2023/11/Snapinsta.app_263785629_587563408979949_6263822500932554415_n_1080-1.jpg"
+                alt="Hair Studio Franchise Opportunity"
+                className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] object-cover object-center"
+              />
+            </div>
+            <div>
+              <h2
+                className="text-3xl sm:text-4xl font-serif mb-4 sm:mb-6 text-brand.primary"
+                style={{ fontFamily: 'Playfair Display, serif' }}
+              >
+                Join Hair2Hair Studio Franchise
+              </h2>
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                Join Hair2Hair Studio and build your success with a proven, profitable business model in the rapidly growing hair and beauty industry. With over 15 years of expertise, Hair2Hair Studio offers complete franchise support including training, marketing, CRM, and operational guidance.
+              </p>
+              <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 leading-relaxed">
+                The industry is growing at 35% annually, making now the perfect time to invest. Enjoy low setup costs, high returns, and a break-even period of just 6–12 months. We provide full assistance in site setup, interiors, and customer management, along with continuous digital marketing and R&D support.
+              </p>
+              <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+                As a franchise partner, you'll offer premium hair replacement, salon, and spa services using Hair2Hair Studio's exclusive range of products, all under a strong and fast-growing brand trusted by thousands of happy clients.
+              </p>
+              <Button href="/contact" size="lg" className="bg-gradient-to-r from-[#C19A6B] to-[#D4AF37] text-white hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                Learn More About Franchising
+              </Button>
+            </div>
           </div>
         </div>
       </section>

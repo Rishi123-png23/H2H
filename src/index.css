@@ -10,6 +10,11 @@
     letter-spacing: 0.01em;
   }
 
+  /* Ensure body content doesn't overlap with fixed header */
+  .main-content {
+    padding-top: 6rem; /* 96px - accounts for fixed header height (contact bar + navigation) */
+  }
+
   h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.01em;

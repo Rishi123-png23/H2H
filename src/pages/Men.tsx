@@ -81,14 +81,14 @@ export default function Men() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
           backgroundImage: 'url(/Data/IMG-20251003-WA0075.jpg)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#C19A6B]/80 to-[#D4AF37]/60" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-serif mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -102,7 +102,7 @@ export default function Men() {
       <div className="max-w-7xl mx-auto px-4">
         <section className="mb-16">
           <h2
-            className="text-4xl font-serif text-center text-[#8B1538] mb-8"
+            className="text-4xl font-serif text-center text-[#C19A6B] mb-8"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Coverage Solutions
@@ -120,7 +120,7 @@ export default function Men() {
 
         <section id="patches" className="mb-16">
           <h2
-            className="text-4xl font-serif text-[#8B1538] mb-4"
+            className="text-4xl font-serif text-[#C19A6B] mb-4"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Hair Patches & Systems
@@ -147,7 +147,7 @@ export default function Men() {
                   <ul className="space-y-1 mb-4">
                     {product.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#8B1538] rounded-full" />
+                        <span className="w-1.5 h-1.5 bg-[#C19A6B] rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -163,7 +163,7 @@ export default function Men() {
 
         <section id="wigs" className="mb-16">
           <h2
-            className="text-4xl font-serif text-[#8B1538] mb-4"
+            className="text-4xl font-serif text-[#C19A6B] mb-4"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Full Wigs & Toupees
@@ -189,7 +189,7 @@ export default function Men() {
                   <ul className="space-y-1 mb-4">
                     {product.features.map((feature, idx) => (
                       <li key={idx} className="text-sm text-gray-600 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 bg-[#8B1538] rounded-full" />
+                        <span className="w-1.5 h-1.5 bg-[#C19A6B] rounded-full" />
                         {feature}
                       </li>
                     ))}
@@ -204,13 +204,13 @@ export default function Men() {
         </section>
 
         <section className="bg-gray-50 rounded-2xl p-8 mb-16">
-          <h3 className="text-3xl font-serif text-[#8B1538] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h3 className="text-3xl font-serif text-[#C19A6B] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
             Choosing the Right Base Type
           </h3>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b-2 border-[#8B1538]">
+                <tr className="border-b-2 border-[#C19A6B]">
                   <th className="text-left py-3 px-4 font-semibold">Base Type</th>
                   <th className="text-center py-3 px-4 font-semibold">Breathability</th>
                   <th className="text-center py-3 px-4 font-semibold">Durability</th>
@@ -258,7 +258,7 @@ export default function Men() {
         </section>
 
         <section className="bg-gradient-to-r from-[#F5E6EA] to-[#E4B5C0] rounded-2xl p-8 text-center">
-          <h3 className="text-3xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h3 className="text-3xl font-serif text-[#C19A6B] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Start Your Transformation Today
           </h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">

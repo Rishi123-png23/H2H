@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import { MapPin, Phone, Clock, Send } from 'lucide-react';
 import Card from '../components/Card';
 import Button from '../components/Button';
 
@@ -64,10 +64,10 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h1 className="text-5xl font-serif text-[#C19A6B] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Get In Touch
           </h1>
           <p className="text-xl text-gray-600">We're here to answer all your questions</p>
@@ -81,13 +81,13 @@ export default function Contact() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
-          <Card hover className="p-6 text-center border-2 border-[#8B1538]">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#8B1538] to-[#A0153E] rounded-full mb-4">
+          <Card hover className="p-6 text-center border-2 border-[#C19A6B]">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#C19A6B] to-[#D4AF37] rounded-full mb-4">
               <MapPin className="text-white" size={24} />
             </div>
             <h3 className="font-semibold text-lg mb-3 text-gray-800">
               Main Branch - Hyderabad
-              <span className="block text-sm text-[#8B1538] font-medium mt-1">Dilshuknagar</span>
+              <span className="block text-sm text-[#C19A6B] font-medium mt-1">Dilshuknagar</span>
             </h3>
             <p className="text-gray-600 mb-4">
               1st Floor, beside Sai Baba Temple, Pratap Nagar, Dilsukhnagar, Hyderabad, Telangana 500060
@@ -96,7 +96,7 @@ export default function Contact() {
               href="https://www.google.com/maps?sca_esv=2286ae5c4aad172f&rlz=1C1CHBF_enIN1003IN1003&sxsrf=AE3TifN9v7wVjK-Cfq4Nuf7Et3DMZzzogQ:1761147267709&gs_lp=Egxnd3Mtd2l6LXNlcnAiIWgyaCBoYWlyIHN0dWRpbyBoeWRlcmFiYWQgZGlsc2h1ayoCCAAyBxAhGKABGAoyBxAhGKABGApIvClQyw5YzRpwAXgAkAEAmAGAAqABjgyqAQUwLjYuM7gBAcgBAPgBAZgCCqAC7QzCAggQABiABBiwA8ICDhAAGIAEGLADGIYDGIoFwgILEAAYgAQYsAMYogTCAgsQABiwAxiiBBiJBcICBRAhGKABwgIEECEYFZgDAIgGAZAGCZIHBTEuNi4zoAexK7IHBTAuNi4zuAfjDMIHBzAuMi42LjLIBzw&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kedsqbs3mcs7MZ1hrQ1iZ5S4&daddr=1st+Floor,+beside+Sai+Baba+Temple,+Pratap+Nagar,+Dilsukhnagar,+Hyderabad,+Telangana+500060"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#8B1538] font-medium hover:text-[#A0153E] transition"
+              className="text-[#C19A6B] font-medium hover:text-[#D4AF37] transition"
             >
               Get Directions →
             </a>
@@ -121,18 +121,18 @@ export default function Contact() {
           </Card>
 
           <Card hover className="p-6 text-center">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#8B1538] to-[#A0153E] rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#C19A6B] to-[#D4AF37] rounded-full mb-4">
               <Phone className="text-white" size={24} />
             </div>
             <h3 className="font-semibold text-lg mb-3 text-gray-800">Call/Email Us</h3>
             <div className="space-y-2 text-gray-600">
               <p>
-                <a href="tel:+918121999243" className="hover:text-[#8B1538] transition">
+                <a href="tel:+918121999243" className="hover:text-[#C19A6B] transition">
                   +91 81219 99243
                 </a>
               </p>
               <p>
-                <a href="mailto:hair2hairstidio2024@gmail.com" className="hover:text-[#8B1538] transition break-all">
+                <a href="mailto:hair2hairstidio2024@gmail.com" className="hover:text-[#C19A6B] transition break-all">
                   hair2hairstidio2024@gmail.com
                 </a>
               </p>
@@ -148,7 +148,7 @@ export default function Contact() {
           </Card>
 
           <Card hover className="p-6 text-center">
-            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#8B1538] to-[#A0153E] rounded-full mb-4">
+            <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-[#C19A6B] to-[#D4AF37] rounded-full mb-4">
               <Clock className="text-white" size={24} />
             </div>
             <h3 className="font-semibold text-lg mb-3 text-gray-800">Business Hours</h3>
@@ -164,7 +164,7 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <Card className="p-8">
-              <h2 className="text-3xl font-serif text-[#8B1538] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl font-serif text-[#C19A6B] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Send Us a Message
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -173,7 +173,7 @@ export default function Contact() {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B]"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   />
@@ -184,7 +184,7 @@ export default function Contact() {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B]"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
@@ -195,7 +195,7 @@ export default function Contact() {
                   <input
                     type="tel"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B]"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   />
@@ -205,7 +205,7 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Select Your Concern *</label>
                   <select
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B]"
                     value={formData.concern}
                     onChange={(e) => setFormData({ ...formData, concern: e.target.value })}
                   >
@@ -225,13 +225,13 @@ export default function Contact() {
                   <textarea
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#8B1538]"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#C19A6B]"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
 
-                <Button type="submit" size="lg" className="w-full">
+                <Button type="submit" size="lg" className="w-full bg-[#C19A6B] hover:bg-[#D4AF37]">
                   <Send size={20} className="mr-2" />
                   Send Message
                 </Button>
@@ -241,7 +241,7 @@ export default function Contact() {
 
           <div>
             <Card className="h-full p-8">
-              <h2 className="text-3xl font-serif text-[#8B1538] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
+              <h2 className="text-3xl font-serif text-[#C19A6B] mb-6" style={{ fontFamily: 'Playfair Display, serif' }}>
                 Find Us
               </h2>
               <div className="aspect-video bg-gray-200 rounded-lg mb-6 overflow-hidden">

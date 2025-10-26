@@ -96,7 +96,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-16">
+    <div className="min-h-screen pb-16">
       <div
         className="h-64 bg-cover bg-center relative mb-12"
         style={{
@@ -104,7 +104,7 @@ export default function Services() {
             'url(https://images.pexels.com/photos/3992870/pexels-photo-3992870.jpeg?auto=compress&cs=tinysrgb&w=1920)',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-[#8B1538]/80 to-[#A0153E]/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#C19A6B]/80 to-[#D4AF37]/60" />
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-serif mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
@@ -118,7 +118,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4">
         <section className="mb-16">
           <h2
-            className="text-4xl font-serif text-center text-[#8B1538] mb-12"
+            className="text-4xl font-serif text-center text-[#C19A6B] mb-12"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Hair Replacement Services
@@ -137,10 +137,10 @@ export default function Services() {
                       />
                     </div>
                     <div className={`p-8 order-1 lg:order-${index % 2 === 0 ? '2' : '1'}`}>
-                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#8B1538] to-[#A0153E] rounded-full mb-4">
+                      <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-[#C19A6B] to-[#D4AF37] rounded-full mb-4">
                         <service.icon className="text-white" size={24} />
                       </div>
-                      <h3 className="text-3xl font-serif text-[#8B1538] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
+                      <h3 className="text-3xl font-serif text-[#C19A6B] mb-2" style={{ fontFamily: 'Playfair Display, serif' }}>
                         {service.title}
                       </h3>
                       <p className="text-[#D4AF37] font-medium mb-4">Duration: {service.duration}</p>
@@ -151,7 +151,7 @@ export default function Services() {
                         <ol className="space-y-2">
                           {service.process.map((step, idx) => (
                             <li key={idx} className="flex items-start gap-2">
-                              <span className="font-semibold text-[#8B1538] mt-0.5">{idx + 1}.</span>
+                              <span className="font-semibold text-[#C19A6B] mt-0.5">{idx + 1}.</span>
                               <span className="text-gray-700">{step}</span>
                             </li>
                           ))}
@@ -163,7 +163,7 @@ export default function Services() {
                         <ul className="space-y-2">
                           {service.benefits.map((benefit, idx) => (
                             <li key={idx} className="flex items-center gap-2">
-                              <span className="w-2 h-2 bg-[#8B1538] rounded-full" />
+                              <span className="w-2 h-2 bg-[#C19A6B] rounded-full" />
                               <span className="text-gray-700">{benefit}</span>
                             </li>
                           ))}
@@ -181,7 +181,7 @@ export default function Services() {
 
         <section className="mb-16">
           <h2
-            className="text-4xl font-serif text-center text-[#8B1538] mb-12"
+            className="text-4xl font-serif text-center text-[#C19A6B] mb-12"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Wig Services
@@ -200,7 +200,7 @@ export default function Services() {
         </section>
 
         <section className="bg-gradient-to-r from-[#F5E6EA] to-[#E4B5C0] rounded-2xl p-12 text-center">
-          <h3 className="text-3xl font-serif text-[#8B1538] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
+          <h3 className="text-3xl font-serif text-[#C19A6B] mb-4" style={{ fontFamily: 'Playfair Display, serif' }}>
             Not Sure Which Service is Right for You?
           </h3>
           <p className="text-gray-700 mb-6 max-w-2xl mx-auto">
